@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    // A 라는 함수를 선언하여 생성자 x를 선언해주었다.
+    var A = function() {
+        this.x = function() {
+            console.log('hello');
+        };
+    };
+
+    // A 의 프로토타입에 x() 라는 함수를 선언해주었다.
+    A.prototype.x = function() {
+        console.log('world');
+    }
+
+    var B = new A();
+    var C = new A();
+    B.x();      // hello
+    C.x();      // hello
+    // 자식인 A 가 x 를 가지고 있는 것이 확인되어서 바로 hello 를 실행
+
+</script>
+<body>
+    
+</body>
+</html>

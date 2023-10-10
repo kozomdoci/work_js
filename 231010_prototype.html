@@ -30,5 +30,10 @@
     console.log(Person.__proto__ === Function.prototype);
 
     console.log(Person.prototype === foo.__proto__);
+
+    console.log("=============================")
+    console.log(Person.prototype.constructor === Person);
+    console.log(foo.constructor === Person);
+    console.log(Person.constructor === Function);
 </script>
 </html>

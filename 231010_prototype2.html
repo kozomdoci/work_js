@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function Person(name, first, second) {
+        this.name = name;
+        this.first = first;
+        this.second = second;
+    }
+    Person.prototype.sum = function() {
+        return this.first + this.second;
+    }
+
+    var kim = new Person('kim', 10, 20);
+    var lee = new Person('lee', 100, 200);
+
+    console.log(kim.sum());     // 30
+    console.log(lee.sum());     // 300
+</script>
+</html>
+
+

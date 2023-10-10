@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    // A 라는 함수를 선언하고 생성자는 별도로 선언해주지 않는다.
+    var A = function() {
+
+    };
+
+    // A 의 프로토타입에 x() 라는 함수를 선언해주었다.
+    A.prototype.x = function() {
+        console.log('world');
+    }
+
+    var B = new A();
+    var C = new A();
+    B.x();      // world
+    C.x();      // world
+    // 자식인 A 에 x 함수가 없기 때문에 부모인 prototype 을 확인하고 __proto__ 링크에 있는 x() 함수를 실행하여 world 를 출력
+
+</script>
+<body>
+    
+</body>
+</html>
+
